@@ -152,7 +152,7 @@
       let reportText = ''     
 
       // Open the SSE stream
-      const url = `${window.location.origin}ask/stream?question=${encodeURIComponent(question)}`
+      const url = `${window.location.origin}/ask/stream?question=${encodeURIComponent(question)}`
       const eventSource = new EventSource(url)
 
       eventSource.onmessage = (event) => {
