@@ -115,6 +115,25 @@
     }
 
     @keyframes blink { 50% { opacity: 0; } }
+
+    #qr-wrapper {
+      margin-top: 1.5rem;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    #qr-code {
+      background: #ffffff;
+      padding: 0.75rem;
+      border-radius: 12px;
+    }
+
+    #qr-hint {
+      font-size: 0.8rem;
+      color: #aaa;
+    }
   </style>
 </head>
 <body>
@@ -128,11 +147,17 @@
       onkeydown="if(event.key==='Enter') ask()"
     />
     <button id="btn" onclick="ask()">Research</button>
+    <button id="qr-btn" onclick="showQr()">Mobile QR</button>
   </div>
 
   <div class="status" id="status"></div>
   <div class="sources" id="sources"></div>
   <div class="report" id="report"></div>
+
+  <div id="qr-wrapper">
+    <div id="qr-code"></div>
+    <div id="qr-hint">Scan this with your phone to open this page.</div>
+  </div>
 
   <script>
     async function ask() {
@@ -202,6 +227,44 @@
         eventSource.close()
       }
     }
+
+    function showQr() {
+      const wrapper = document.getElementById('qr-wrapper');
+      const container = document.getElementById('qr-code');
+
+      if (!wrapper || !container) return;
+
+      // If currently visible, hide and clear (toggle off)
+      if (wrapper.style.display === 'flex') {
+        wrapper.style.display = 'none';
+        container.innerHTML = '';
+        return;
+      }
+
+      // Otherwise, show and render QR for current URL
+      wrapper.style.display = 'flex';
+
+      // Smoothly scroll the QR section into view
+      wrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+      const url = encodeURIComponent(window.location.href);
+      const imgSrc = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${url}`;
+
+      container.innerHTML = `<img src="${imgSrc}" alt="QR code to open this page" width="200" height="200" style="display:block;" />`;
+    }
+
+    // Hide QR whenever the user types in the input
+    (function setupHideQrOnInput() {
+      const input = document.getElementById('input');
+      if (!input) return;
+
+      input.addEventListener('input', () => {
+        const wrapper = document.getElementById('qr-wrapper');
+        const container = document.getElementById('qr-code');
+        if (wrapper) wrapper.style.display = 'none';
+        if (container) container.innerHTML = '';
+      });
+    })();
   </script>
 </body>
 </html>
