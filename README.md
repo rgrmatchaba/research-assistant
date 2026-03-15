@@ -162,6 +162,5 @@ Intermediate developer learning AI engineering in public.
 [![Blog](https://img.shields.io/badge/Blog-dev.to-black)](https://dev.to/ruethedev)
 [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://research-assistant-w3tf.onrender.com/)
 
----
-*Built in one weekend as a first AI project. 
-Zero AI experience before this.*
+Built in one weekend as a first AI project. 
+Zero AI experience before this.
