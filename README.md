@@ -7,8 +7,7 @@ A multi-agent AI system that researches any topic in real time —
 [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://research-assistant-w3tf.onrender.com/)
 [![GitHub](https://img.shields.io/badge/View-Code-blue)](https://github.com/rgrmatchaba/research-assistant)
 [![Blog Post](https://img.shields.io/badge/Read-Blog_Post-orange)](https://dev.to/ruethedev)
-[![Video-Demo](https://www.loom.com/share/8954ebda56f3412f8ae279c95103eb35)]
-
+[![Video Demo](https://img.shields.io/badge/Watch-Video_Demo-red)](https://www.loom.com/share/8954ebda56f3412f8ae279c95103eb35)
 
 ## What It Does
 
@@ -143,27 +142,25 @@ http://localhost:3000
 ```
 
 
-API KEYS NEEDED 
-# LLM Provider — 'ollama' for local dev, 'groq' for production
+#API KEYS NEEDED 
+LLM Provider — 'ollama' for local dev, 'groq' for production
 LLM_PROVIDER=ollama
 
-# Required for web search — get free key at tavily.com
+Required for web search — get free key at tavily.com
 TAVILY_API_KEY=
 
-# Required if LLM_PROVIDER=groq — get free key at console.groq.com
+Required if LLM_PROVIDER=groq — get free key at console.groq.com
 GROQ_API_KEY=
 ```
 
-
-
 ## Author
 
-Rue Matchaba
+Rue Matchaba  
 Intermediate developer learning AI engineering in public.
 
-[LinkedIn](www.linkedin.com/in/rumbidzai-matchaba) 
-[Blog](https://dev.to/ruethedev) 
-[Live Demo](https://research-assistant-w3tf.onrender.com/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue)](https://www.linkedin.com/in/rumbidzai-matchaba)
+[![Blog](https://img.shields.io/badge/Blog-dev.to-black)](https://dev.to/ruethedev)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://research-assistant-w3tf.onrender.com/)
 
 ---
 *Built in one weekend as a first AI project. 
