@@ -164,3 +164,4 @@ Intermediate developer learning AI engineering in public.
 
 Built in one weekend as a first AI project. 
 Zero AI experience before this.
+```
