@@ -142,7 +142,7 @@ http://localhost:3000
 ```
 
 
-#API KEYS NEEDED 
+## API KEYS NEEDED 
 LLM Provider — 'ollama' for local dev, 'groq' for production
 LLM_PROVIDER=ollama
 
@@ -153,7 +153,7 @@ Required if LLM_PROVIDER=groq — get free key at console.groq.com
 GROQ_API_KEY=
 ```
 
-## Author
+# Author
 
 Rue Matchaba  
 Intermediate developer learning AI engineering in public.
